@@ -33,59 +33,6 @@ python3 -m flake8
 
 ---
 
-#### Testes
-
-Para executar os testes certifique-se de que os seguintes passos foram realizados;
-
-1. **criar o ambiente virtual**
-
-```bash
-$ python3 -m venv .venv
-```
-
-2. **ativar o ambiente virtual**
-
-```bash
-$ source .venv/bin/activate
-```
-
-3. **instalar as dependências no ambiente virtual**
-
-```bash
-$ python3 -m pip install -r dev-requirements.txt
-```
-
-Com o seu ambiente virtual ativo, as dependências serão instaladas neste ambiente.
-Quando precisar desativar o ambiente virtual, execute o comando "deactivate". Lembre-se de ativar novamente quando voltar a trabalhar no projeto.
-
-O arquivo `dev-requirements.txt` contém todas as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`.
-
-Com esta preparação feita, podemos executar os testes:
-
-**Executar os testes**
-
-```bash
-$ python3 -m pytest
-```
-
-O arquivo `pyproject.toml` já configura corretamente o pytest. Entretanto, caso você tenha problemas com isso queira explicitamente uma saída completa, o comando é:
-
-```bash
-python3 -m pytest -s -vv
-```
-
-Caso precise executar apenas um arquivo de testes basta executar o comando:
-
-```bash
-python3 -m pytest tests/nomedoarquivo.py
-```
-
-Caso precise executar apenas uma função de testes basta executar o comando:
-
-```bash
-python3 -m pytest -k nome_da_func_de_tests
-```
-
 ### Requisitos
 
 #### Requisitos obrigatórios
